@@ -1,6 +1,6 @@
 # TextToSpeechSynthesizer
 
-`TextToSpeechSynthesizer`用于控制语音合成模块的主类
+`TextToSpeechSynthesizer`用于控制文本到语音合成模块的主类
 
 ## API使用文档
 
