@@ -1,6 +1,6 @@
-# VoiceSynthesizer
+# TextToSpeechSynthesizer
 
-`VoiceSynthesizer`用于控制语音合成模块的主类
+`TextToSpeechSynthesizer`用于控制语音合成模块的主类
 
 ## API使用文档
 
@@ -8,36 +8,36 @@
 
 #### 文本数据编码类型
 
-| VoiceSynthesizer::**TextEncodingType** | 值 | 描述 |
+| TextToSpeechSynthesizer::**TextEncodingType** | 值 | 描述 |
 | --- | --- | --- |
-| VoiceSynthesizer::TextEncodingType::**kTextEncodingTypeGb23212** | 0x00 | GB2312 |
-| VoiceSynthesizer::TextEncodingType::**kTextEncodingTypeGbk** | 0x01 | GBK |
-| VoiceSynthesizer::TextEncodingType::**kTextEncodingTypeBig5** | 0x02 | BIG5 |
-| VoiceSynthesizer::TextEncodingType::**kTextEncodingTypeUtf16le** | 0x03 | UTF16LE |
-| VoiceSynthesizer::TextEncodingType::**kTextEncodingTypeUtf8** | 0x04 | UTF8 |
+| TextToSpeechSynthesizer::TextEncodingType::**kTextEncodingTypeGb23212** | 0x00 | GB2312 |
+| TextToSpeechSynthesizer::TextEncodingType::**kTextEncodingTypeGbk** | 0x01 | GBK |
+| TextToSpeechSynthesizer::TextEncodingType::**kTextEncodingTypeBig5** | 0x02 | BIG5 |
+| TextToSpeechSynthesizer::TextEncodingType::**kTextEncodingTypeUtf16le** | 0x03 | UTF16LE |
+| TextToSpeechSynthesizer::TextEncodingType::**kTextEncodingTypeUtf8** | 0x04 | UTF8 |
 
 #### 文本数据最大字节数
 
 | | 值 | 描述 |
 | --- | --- | --- |
-| VoiceSynthesizer::**kTextSizeMax** | 50 | 文本数据最大字节数 |
+| TextToSpeechSynthesizer::**kTextSizeMax** | 50 | 文本数据最大字节数 |
 
 #### 缓存块索引最大值
 
 | | 值 | 描述 |
 | --- | --- | --- |
-| VoiceSynthesizer::**kCacheIndexMax** | 15 | 缓存块索引最大值 |
+| TextToSpeechSynthesizer::**kCacheIndexMax** | 15 | 缓存块索引最大值 |
 
 #### 缓存合成播放次数范围
 
 | | 值 | 描述 |
 | --- | --- | --- |
-| VoiceSynthesizer::**kSynthesizingCountMin** | 1 | 从缓存合成播放次数的最小值 |
-| VoiceSynthesizer::**kSynthesizingCountMax** | 15 | 从缓存合成播放次数的最小值 |
+| TextToSpeechSynthesizer::**kSynthesizingCountMin** | 1 | 从缓存合成播放次数的最小值 |
+| TextToSpeechSynthesizer::**kSynthesizingCountMax** | 15 | 从缓存合成播放次数的最小值 |
 
 ### 构造函数
 
-#### `VoiceSynthesizer()`
+#### `TextToSpeechSynthesizer()`
 
 - 描述：构造函数。
 - 返回值：无。
@@ -102,11 +102,11 @@
 ```c++
 #include <Arduino.h>
 
-// 包含头文件 voice_synthesizer.h
-#include "voice_synthesizer.h"
+// 包含头文件 text_to_speech_synthesizer.h
+#include "text_to_speech_synthesizer.h"
 
-// 定义voice_synthesizer
-VoiceSynthesizer voice_synthesizer;
+// 定义text_to_speech_synthesizer
+TextToSpeechSynthesizer text_to_speech_synthesizer;
 
 void setup() {
   Serial.begin(115200);
@@ -118,7 +118,7 @@ void loop() {
   String text("一二三四五");
 
   // 开始以utf-8编码格式合成播放文本
-  voice_synthesizer.StartSynthesizing(text.c_str(), text.length(), VoiceSynthesizer::TextEncodingType::kTextEncodingTypeUtf8);
+  text_to_speech_synthesizer.StartSynthesizing(text.c_str(), text.length(), TextToSpeechSynthesizer::TextEncodingType::kTextEncodingTypeUtf8);
 
   delay(2000);
 }
@@ -129,11 +129,11 @@ void loop() {
 ```c++
 #include <Arduino.h>
 
-// 包含头文件 voice_synthesizer.h
-#include "voice_synthesizer.h"
+// 包含头文件 text_to_speech_synthesizer.h
+#include "text_to_speech_synthesizer.h"
 
-// 定义voice_synthesizer
-VoiceSynthesizer voice_synthesizer;
+// 定义text_to_speech_synthesizer
+TextToSpeechSynthesizer text_to_speech_synthesizer;
 
 void setup() {
   Serial.begin(115200);
@@ -145,16 +145,16 @@ void loop() {
   String text_1("一二三四五");
 
   // 将文本1内容上传到缓存块0
-  voice_synthesizer.PushTextToCache(text_1.c_str(), text_1.length(), 0);
+  text_to_speech_synthesizer.PushTextToCache(text_1.c_str(), text_1.length(), 0);
 
   // 定义文本2，utf-8编码格式
   String text_2("六七八九十");
 
   // 将文本2内容上传到缓存块1
-  voice_synthesizer.PushTextToCache(text_2.c_str(), text_2.length(), 1);
+  text_to_speech_synthesizer.PushTextToCache(text_2.c_str(), text_2.length(), 1);
 
   // 开始从缓存区域合成播放文本，合成播放1次
-  voice_synthesizer.StartSynthesizingFromCache(VoiceSynthesizer::TextEncodingType::kTextEncodingTypeUtf8, 1);
+  text_to_speech_synthesizer.StartSynthesizingFromCache(TextToSpeechSynthesizer::TextEncodingType::kTextEncodingTypeUtf8, 1);
 
   delay(3000);
 }
@@ -165,11 +165,11 @@ void loop() {
 ```c++
 #include <Arduino.h>
 
-// 包含头文件 voice_synthesizer.h
-#include "voice_synthesizer.h"
+// 包含头文件 text_to_speech_synthesizer.h
+#include "text_to_speech_synthesizer.h"
 
-// 定义voice_synthesizer
-VoiceSynthesizer voice_synthesizer;
+// 定义text_to_speech_synthesizer
+TextToSpeechSynthesizer text_to_speech_synthesizer;
 
 void setup() {
   Serial.begin(115200);
@@ -181,24 +181,24 @@ void loop() {
   String text("一二三四五六七八九十");
 
   // 开始以utf-8编码格式合成播放文本
-  voice_synthesizer.StartSynthesizing(text.c_str(), text.length(), VoiceSynthesizer::TextEncodingType::kTextEncodingTypeUtf8);
+  text_to_speech_synthesizer.StartSynthesizing(text.c_str(), text.length(), TextToSpeechSynthesizer::TextEncodingType::kTextEncodingTypeUtf8);
 
   // 延时1s
   delay(1000);
 
   // 暂停合成播放
-  voice_synthesizer.PauseSynthesizing();
+  text_to_speech_synthesizer.PauseSynthesizing();
 
   // 延时1s
   delay(1000);
 
   // 恢复合成播放
-  voice_synthesizer.ResumeSynthesizing();
+  text_to_speech_synthesizer.ResumeSynthesizing();
 
   // 延时2s
   delay(1000);
 
   // 停止合成播放
-  voice_synthesizer.StopSynthesizing();
+  text_to_speech_synthesizer.StopSynthesizing();
 }
 ```

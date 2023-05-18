@@ -3,10 +3,10 @@
 #include <stdint.h>
 
 /**
- * @class VoiceSynthesizer
+ * @class TextToSpeechSynthesizer
  * @brief 语音合成主类
  */
-class VoiceSynthesizer {
+class TextToSpeechSynthesizer {
  public:
   /**
    * @enum TextEncodingType
@@ -36,7 +36,7 @@ class VoiceSynthesizer {
   /**
    * @brief 构造函数
    */
-  VoiceSynthesizer();
+  TextToSpeechSynthesizer();
 
   /**
    * @brief 启动合成文本并播放
@@ -77,6 +77,6 @@ class VoiceSynthesizer {
   void StartSynthesizingFromCache(const TextEncodingType text_encoding_type, uint8_t synthesizing_count = 1);
 
  private:
-  VoiceSynthesizer(const VoiceSynthesizer&) = delete;
-  VoiceSynthesizer& operator=(const VoiceSynthesizer&) = delete;
+  TextToSpeechSynthesizer(const TextToSpeechSynthesizer&) = delete;
+  TextToSpeechSynthesizer& operator=(const TextToSpeechSynthesizer&) = delete;
 };

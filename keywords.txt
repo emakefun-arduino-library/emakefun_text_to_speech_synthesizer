@@ -2,7 +2,7 @@
 # Classes, datatypes (KEYWORD1)
 #######################################
 
-VoiceSynthesizer KEYWORD1
+TextToSpeechSynthesizer KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)

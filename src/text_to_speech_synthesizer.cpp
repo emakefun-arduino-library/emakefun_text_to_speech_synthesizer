@@ -1,4 +1,4 @@
-#include "voice_synthesizer.h"
+#include "text_to_speech_synthesizer.h"
 
 #include "utility/TinyI2CMaster.h"
 
@@ -6,11 +6,11 @@ namespace {
 const uint8_t kI2cAddress = 0x40;
 }
 
-VoiceSynthesizer::VoiceSynthesizer() {
+TextToSpeechSynthesizer::TextToSpeechSynthesizer() {
   TinyI2C.init();
 }
 
-void VoiceSynthesizer::StartSynthesizing(const char* text, uint8_t text_size, const TextEncodingType text_encoding_type) {
+void TextToSpeechSynthesizer::StartSynthesizing(const char* text, uint8_t text_size, const TextEncodingType text_encoding_type) {
   if (text == nullptr || text == 0) {
     return;
   }
@@ -30,7 +30,7 @@ void VoiceSynthesizer::StartSynthesizing(const char* text, uint8_t text_size, co
   TinyI2C.stop();
 }
 
-void VoiceSynthesizer::StopSynthesizing() {
+void TextToSpeechSynthesizer::StopSynthesizing() {
   TinyI2C.start(kI2cAddress, 0);
   TinyI2C.write(0xFD);
   TinyI2C.write(0x00);
@@ -39,7 +39,7 @@ void VoiceSynthesizer::StopSynthesizing() {
   TinyI2C.stop();
 }
 
-void VoiceSynthesizer::PauseSynthesizing() {
+void TextToSpeechSynthesizer::PauseSynthesizing() {
   TinyI2C.start(kI2cAddress, 0);
   TinyI2C.write(0xFD);
   TinyI2C.write(0x00);
@@ -48,7 +48,7 @@ void VoiceSynthesizer::PauseSynthesizing() {
   TinyI2C.stop();
 }
 
-void VoiceSynthesizer::ResumeSynthesizing() {
+void TextToSpeechSynthesizer::ResumeSynthesizing() {
   TinyI2C.start(kI2cAddress, 0);
   TinyI2C.write(0xFD);
   TinyI2C.write(0x00);
@@ -57,7 +57,7 @@ void VoiceSynthesizer::ResumeSynthesizing() {
   TinyI2C.stop();
 }
 
-void VoiceSynthesizer::PushTextToCache(const char* text, uint8_t text_size, const uint8_t cache_index) {
+void TextToSpeechSynthesizer::PushTextToCache(const char* text, uint8_t text_size, const uint8_t cache_index) {
   if (text == nullptr || text == 0 || cache_index > kCacheIndexMax) {
     return;
   }
@@ -77,7 +77,7 @@ void VoiceSynthesizer::PushTextToCache(const char* text, uint8_t text_size, cons
   TinyI2C.stop();
 }
 
-void VoiceSynthesizer::StartSynthesizingFromCache(const TextEncodingType text_encoding_type, uint8_t synthesizing_count) {
+void TextToSpeechSynthesizer::StartSynthesizingFromCache(const TextEncodingType text_encoding_type, uint8_t synthesizing_count) {
   synthesizing_count = max(min(synthesizing_count, kSynthesizingCountMax), kSynthesizingCountMin);
   TinyI2C.start(kI2cAddress, 0);
   TinyI2C.write(0xFD);

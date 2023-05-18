@@ -1,10 +1,10 @@
 #include <Arduino.h>
 
-// 包含头文件 voice_synthesizer.h
-#include "voice_synthesizer.h"
+// 包含头文件 text_to_speech_synthesizer.h
+#include "text_to_speech_synthesizer.h"
 
-// 定义voice_synthesizer
-VoiceSynthesizer voice_synthesizer;
+// 定义text_to_speech_synthesizer
+TextToSpeechSynthesizer text_to_speech_synthesizer;
 
 void setup() {
   Serial.begin(115200);
@@ -16,7 +16,7 @@ void loop() {
   String text("一二三四五");
 
   // 开始以utf-8编码格式合成播放文本
-  voice_synthesizer.StartSynthesizing(text.c_str(), text.length(), VoiceSynthesizer::TextEncodingType::kTextEncodingTypeUtf8);
+  text_to_speech_synthesizer.StartSynthesizing(text.c_str(), text.length(), TextToSpeechSynthesizer::TextEncodingType::kTextEncodingTypeUtf8);
 
   delay(2000);
 }
