@@ -2,24 +2,32 @@
 # Classes, datatypes (KEYWORD1)
 #######################################
 
-GestureSensor	KEYWORD1
+VoiceSynthesizer KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-GetGesture KEYWORD2
+StartSynthesizing KEYWORD2
+StopSynthesizing KEYWORD2
+PauseSynthesizing KEYWORD2
+ResumeSynthesizing KEYWORD2
+PushTextToCache KEYWORD2
+StartSynthesizingFromCache KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
 #######################################
 
-kGestureNone LITERAL1
-kGestureRightSwipe LITERAL1
-kGestureLeftSwipe LITERAL1
-kGestureBackwardSwipe LITERAL1
-kGestureForwardSwipe LITERAL1
-kGestureUpward LITERAL1
-kGestureDownward LITERAL1
-kGestureOutOfRange LITERAL1
-kGestureHover LITERAL1
+kTextEncodingTypeGb23212 LITERAL1
+kTextEncodingTypeGbk LITERAL1
+kTextEncodingTypeBig5 LITERAL1
+kTextEncodingTypeUtf16le LITERAL1
+kTextEncodingTypeUtf8 LITERAL1
+
+kCacheIndexMax LITERAL1
+
+kTextSizeMax LITERAL1
+
+kSynthesizingCountMin LITERAL1
+kSynthesizingCountMax LITERAL1
