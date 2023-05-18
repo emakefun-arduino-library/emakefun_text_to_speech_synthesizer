@@ -1,0 +1,25 @@
+#######################################
+# Classes, datatypes (KEYWORD1)
+#######################################
+
+GestureSensor	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+GetGesture KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+kGestureNone LITERAL1
+kGestureRightSwipe LITERAL1
+kGestureLeftSwipe LITERAL1
+kGestureBackwardSwipe LITERAL1
+kGestureForwardSwipe LITERAL1
+kGestureUpward LITERAL1
+kGestureDownward LITERAL1
+kGestureOutOfRange LITERAL1
+kGestureHover LITERAL1
