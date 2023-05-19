@@ -1,0 +1,388 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="zh">
+  <compounddef id="classTextToSpeechSynthesizer" kind="class" language="C++" prot="public">
+    <compoundname>TextToSpeechSynthesizer</compoundname>
+    <includes refid="text__to__speech__synthesizer_8h" local="no">text_to_speech_synthesizer.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classTextToSpeechSynthesizer_1a4dae86d1d4cf4f6aeeec8b1ba3575122" prot="public" static="no" strong="no">
+        <type>uint8_t</type>
+        <name>TextEncodingType</name>
+        <qualifiedname>TextToSpeechSynthesizer::TextEncodingType</qualifiedname>
+        <enumvalue id="classTextToSpeechSynthesizer_1a4dae86d1d4cf4f6aeeec8b1ba3575122af49ea4453c0246678556ba037e94c34f" prot="public">
+          <name>kTextEncodingTypeGb23212</name>
+          <initializer>= 0x00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>GB2312 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classTextToSpeechSynthesizer_1a4dae86d1d4cf4f6aeeec8b1ba3575122a1255bf612c5475e2aa9ec7c0a5b8f45d" prot="public">
+          <name>kTextEncodingTypeGbk</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>GBK </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classTextToSpeechSynthesizer_1a4dae86d1d4cf4f6aeeec8b1ba3575122a74f7f0c57948fed5d67891209274cc2c" prot="public">
+          <name>kTextEncodingTypeBig5</name>
+          <initializer>= 0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>BIG5 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classTextToSpeechSynthesizer_1a4dae86d1d4cf4f6aeeec8b1ba3575122a0dddb46a66e3084b7de46d43b2cdafdc" prot="public">
+          <name>kTextEncodingTypeUtf16le</name>
+          <initializer>= 0x03</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>UTF16LE </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classTextToSpeechSynthesizer_1a4dae86d1d4cf4f6aeeec8b1ba3575122ab9474e3b178554ef766fcbc0cb0d7a53" prot="public">
+          <name>kTextEncodingTypeUtf8</name>
+          <initializer>= 0x04</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>UTF8 </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>文本编码类型 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/text_to_speech_synthesizer.h" line="16" column="3" bodyfile="src/text_to_speech_synthesizer.h" bodystart="16" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="enum" id="classTextToSpeechSynthesizer_1a714925763209ef5d2f026c36069e8696" prot="public" static="no" strong="no">
+        <type>uint8_t</type>
+        <name></name>
+        <qualifiedname>TextToSpeechSynthesizer</qualifiedname>
+        <enumvalue id="classTextToSpeechSynthesizer_1a714925763209ef5d2f026c36069e8696a47fbe54370b3766e2cfe39444dcd9aff" prot="public">
+          <name>kCacheIndexMax</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>缓存块索引最大值 </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/text_to_speech_synthesizer.h" line="24" column="3" bodyfile="src/text_to_speech_synthesizer.h" bodystart="24" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="enum" id="classTextToSpeechSynthesizer_1a652be6db2c7d7224be54c5fc85974b61" prot="public" static="no" strong="no">
+        <type>uint8_t</type>
+        <name></name>
+        <qualifiedname>TextToSpeechSynthesizer</qualifiedname>
+        <enumvalue id="classTextToSpeechSynthesizer_1a652be6db2c7d7224be54c5fc85974b61a6e240b4211e757e208a008c8f9d2104b" prot="public">
+          <name>kTextSizeMax</name>
+          <initializer>= 50</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>文本数据最大字节数 </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/text_to_speech_synthesizer.h" line="28" column="3" bodyfile="src/text_to_speech_synthesizer.h" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="enum" id="classTextToSpeechSynthesizer_1a2def84d4e4c020712b7def8ee1eb3426" prot="public" static="no" strong="no">
+        <type>uint8_t</type>
+        <name></name>
+        <qualifiedname>TextToSpeechSynthesizer</qualifiedname>
+        <enumvalue id="classTextToSpeechSynthesizer_1a2def84d4e4c020712b7def8ee1eb3426ae036600d18c5aeea6e2f79c6fbd46231" prot="public">
+          <name>kSynthesizingCountMin</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>从缓存合成播放次数的最小值 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classTextToSpeechSynthesizer_1a2def84d4e4c020712b7def8ee1eb3426abf91e9b0fd58d05dc56e59980cf719fa" prot="public">
+          <name>kSynthesizingCountMax</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>从缓存合成播放次数的最大值 </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/text_to_speech_synthesizer.h" line="32" column="3" bodyfile="src/text_to_speech_synthesizer.h" bodystart="32" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classTextToSpeechSynthesizer_1a8eee24497fc75f1014a499947a0d29b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TextToSpeechSynthesizer::TextToSpeechSynthesizer</definition>
+        <argsstring>()</argsstring>
+        <name>TextToSpeechSynthesizer</name>
+        <qualifiedname>TextToSpeechSynthesizer::TextToSpeechSynthesizer</qualifiedname>
+        <briefdescription>
+<para>构造函数 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/text_to_speech_synthesizer.h" line="40" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classTextToSpeechSynthesizer_1ad5fae621caf50dc4122ebe3b7da26fb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TextToSpeechSynthesizer::StartSynthesizing</definition>
+        <argsstring>(const String &amp;text, const TextEncodingType text_encoding_type)</argsstring>
+        <name>StartSynthesizing</name>
+        <qualifiedname>TextToSpeechSynthesizer::StartSynthesizing</qualifiedname>
+        <param>
+          <type>const String &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classTextToSpeechSynthesizer_1a4dae86d1d4cf4f6aeeec8b1ba3575122" kindref="member">TextEncodingType</ref></type>
+          <declname>text_encoding_type</declname>
+        </param>
+        <briefdescription>
+<para>启动合成文本并播放 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>类型：String，文本数据地址，数据长度不大于50个字节 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">text_encoding_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>文本编码类型，参考 <ref refid="classTextToSpeechSynthesizer_1a4dae86d1d4cf4f6aeeec8b1ba3575122" kindref="member">TextEncodingType</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/text_to_speech_synthesizer.h" line="47" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classTextToSpeechSynthesizer_1a2dbb0d714f527c92796c62c702be8515" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TextToSpeechSynthesizer::StopSynthesizing</definition>
+        <argsstring>()</argsstring>
+        <name>StopSynthesizing</name>
+        <qualifiedname>TextToSpeechSynthesizer::StopSynthesizing</qualifiedname>
+        <briefdescription>
+<para>停止合成播放 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/text_to_speech_synthesizer.h" line="52" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classTextToSpeechSynthesizer_1a220648ec022d7c7e987f5223966946a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TextToSpeechSynthesizer::PauseSynthesizing</definition>
+        <argsstring>()</argsstring>
+        <name>PauseSynthesizing</name>
+        <qualifiedname>TextToSpeechSynthesizer::PauseSynthesizing</qualifiedname>
+        <briefdescription>
+<para>暂停合成播放 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/text_to_speech_synthesizer.h" line="57" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classTextToSpeechSynthesizer_1aa6eaa720686b8a11203de7aaff7f557d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TextToSpeechSynthesizer::ResumeSynthesizing</definition>
+        <argsstring>()</argsstring>
+        <name>ResumeSynthesizing</name>
+        <qualifiedname>TextToSpeechSynthesizer::ResumeSynthesizing</qualifiedname>
+        <briefdescription>
+<para>恢复合成播放 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/text_to_speech_synthesizer.h" line="62" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classTextToSpeechSynthesizer_1acadf42eabb70af8afaeae7dadf6939cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TextToSpeechSynthesizer::PushTextToCache</definition>
+        <argsstring>(const String &amp;text, const uint8_t cache_index)</argsstring>
+        <name>PushTextToCache</name>
+        <qualifiedname>TextToSpeechSynthesizer::PushTextToCache</qualifiedname>
+        <param>
+          <type>const String &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <declname>cache_index</declname>
+        </param>
+        <briefdescription>
+<para>将文本内容上传到指定缓存块 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>类型：String，文本数据地址，数据长度不大于50个字节 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cache_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>缓存块索引，范围参考 0 ~ <ref refid="classTextToSpeechSynthesizer_1a714925763209ef5d2f026c36069e8696a47fbe54370b3766e2cfe39444dcd9aff" kindref="member">kCacheIndexMax</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/text_to_speech_synthesizer.h" line="69" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classTextToSpeechSynthesizer_1a14b078498622cc2162e4902b41a3508e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TextToSpeechSynthesizer::StartSynthesizingFromCache</definition>
+        <argsstring>(const TextEncodingType text_encoding_type, uint8_t synthesizing_count=1)</argsstring>
+        <name>StartSynthesizingFromCache</name>
+        <qualifiedname>TextToSpeechSynthesizer::StartSynthesizingFromCache</qualifiedname>
+        <param>
+          <type>const <ref refid="classTextToSpeechSynthesizer_1a4dae86d1d4cf4f6aeeec8b1ba3575122" kindref="member">TextEncodingType</ref></type>
+          <declname>text_encoding_type</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>synthesizing_count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>从缓存块0开始合成文本并播放 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">text_encoding_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>文本编码类型，参考 <ref refid="classTextToSpeechSynthesizer_1a4dae86d1d4cf4f6aeeec8b1ba3575122" kindref="member">TextEncodingType</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">synthesizing_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>合成播放次数，范围1 ~ 15，参考 <ref refid="classTextToSpeechSynthesizer_1a2def84d4e4c020712b7def8ee1eb3426ae036600d18c5aeea6e2f79c6fbd46231" kindref="member">kSynthesizingCountMin</ref> ~ <ref refid="classTextToSpeechSynthesizer_1a2def84d4e4c020712b7def8ee1eb3426abf91e9b0fd58d05dc56e59980cf719fa" kindref="member">kSynthesizingCountMax</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/text_to_speech_synthesizer.h" line="76" column="8"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classTextToSpeechSynthesizer_1acd4c46aa37b9febbdcf0c1927a4674f2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TextToSpeechSynthesizer::TextToSpeechSynthesizer</definition>
+        <argsstring>(const TextToSpeechSynthesizer &amp;)=delete</argsstring>
+        <name>TextToSpeechSynthesizer</name>
+        <qualifiedname>TextToSpeechSynthesizer::TextToSpeechSynthesizer</qualifiedname>
+        <param>
+          <type>const <ref refid="classTextToSpeechSynthesizer" kindref="compound">TextToSpeechSynthesizer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/text_to_speech_synthesizer.h" line="79" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classTextToSpeechSynthesizer_1a0c7d7a81bd8950c960590cf43ba5dbed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classTextToSpeechSynthesizer" kindref="compound">TextToSpeechSynthesizer</ref> &amp;</type>
+        <definition>TextToSpeechSynthesizer &amp; TextToSpeechSynthesizer::operator=</definition>
+        <argsstring>(const TextToSpeechSynthesizer &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>TextToSpeechSynthesizer::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classTextToSpeechSynthesizer" kindref="compound">TextToSpeechSynthesizer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/text_to_speech_synthesizer.h" line="80" column="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>语音合成主类 </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/text_to_speech_synthesizer.h" line="10" column="1" bodyfile="src/text_to_speech_synthesizer.h" bodystart="10" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classTextToSpeechSynthesizer_1a714925763209ef5d2f026c36069e8696a47fbe54370b3766e2cfe39444dcd9aff" prot="public" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>kCacheIndexMax</name></member>
+      <member refid="classTextToSpeechSynthesizer_1a2def84d4e4c020712b7def8ee1eb3426abf91e9b0fd58d05dc56e59980cf719fa" prot="public" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>kSynthesizingCountMax</name></member>
+      <member refid="classTextToSpeechSynthesizer_1a2def84d4e4c020712b7def8ee1eb3426ae036600d18c5aeea6e2f79c6fbd46231" prot="public" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>kSynthesizingCountMin</name></member>
+      <member refid="classTextToSpeechSynthesizer_1a4dae86d1d4cf4f6aeeec8b1ba3575122a74f7f0c57948fed5d67891209274cc2c" prot="public" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>kTextEncodingTypeBig5</name></member>
+      <member refid="classTextToSpeechSynthesizer_1a4dae86d1d4cf4f6aeeec8b1ba3575122af49ea4453c0246678556ba037e94c34f" prot="public" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>kTextEncodingTypeGb23212</name></member>
+      <member refid="classTextToSpeechSynthesizer_1a4dae86d1d4cf4f6aeeec8b1ba3575122a1255bf612c5475e2aa9ec7c0a5b8f45d" prot="public" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>kTextEncodingTypeGbk</name></member>
+      <member refid="classTextToSpeechSynthesizer_1a4dae86d1d4cf4f6aeeec8b1ba3575122a0dddb46a66e3084b7de46d43b2cdafdc" prot="public" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>kTextEncodingTypeUtf16le</name></member>
+      <member refid="classTextToSpeechSynthesizer_1a4dae86d1d4cf4f6aeeec8b1ba3575122ab9474e3b178554ef766fcbc0cb0d7a53" prot="public" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>kTextEncodingTypeUtf8</name></member>
+      <member refid="classTextToSpeechSynthesizer_1a652be6db2c7d7224be54c5fc85974b61a6e240b4211e757e208a008c8f9d2104b" prot="public" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>kTextSizeMax</name></member>
+      <member refid="classTextToSpeechSynthesizer_1a0c7d7a81bd8950c960590cf43ba5dbed" prot="private" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>operator=</name></member>
+      <member refid="classTextToSpeechSynthesizer_1a220648ec022d7c7e987f5223966946a3" prot="public" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>PauseSynthesizing</name></member>
+      <member refid="classTextToSpeechSynthesizer_1acadf42eabb70af8afaeae7dadf6939cb" prot="public" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>PushTextToCache</name></member>
+      <member refid="classTextToSpeechSynthesizer_1aa6eaa720686b8a11203de7aaff7f557d" prot="public" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>ResumeSynthesizing</name></member>
+      <member refid="classTextToSpeechSynthesizer_1ad5fae621caf50dc4122ebe3b7da26fb2" prot="public" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>StartSynthesizing</name></member>
+      <member refid="classTextToSpeechSynthesizer_1a14b078498622cc2162e4902b41a3508e" prot="public" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>StartSynthesizingFromCache</name></member>
+      <member refid="classTextToSpeechSynthesizer_1a2dbb0d714f527c92796c62c702be8515" prot="public" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>StopSynthesizing</name></member>
+      <member refid="classTextToSpeechSynthesizer_1a4dae86d1d4cf4f6aeeec8b1ba3575122" prot="public" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>TextEncodingType</name></member>
+      <member refid="classTextToSpeechSynthesizer_1a8eee24497fc75f1014a499947a0d29b9" prot="public" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>TextToSpeechSynthesizer</name></member>
+      <member refid="classTextToSpeechSynthesizer_1acd4c46aa37b9febbdcf0c1927a4674f2" prot="private" virt="non-virtual"><scope>TextToSpeechSynthesizer</scope><name>TextToSpeechSynthesizer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
