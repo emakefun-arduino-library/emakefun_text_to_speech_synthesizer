@@ -30,7 +30,7 @@ void loop() {
   // 恢复合成播放
   text_to_speech_synthesizer.ResumeSynthesizing();
 
-  // 延时2s
+  // 延时1s
   delay(1000);
 
   // 停止合成播放

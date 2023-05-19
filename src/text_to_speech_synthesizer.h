@@ -79,3 +79,18 @@ class TextToSpeechSynthesizer {
   TextToSpeechSynthesizer(const TextToSpeechSynthesizer&) = delete;
   TextToSpeechSynthesizer& operator=(const TextToSpeechSynthesizer&) = delete;
 };
+
+/** 
+ * @example synthesize_text.ino
+ * 合成文本并播放
+ */
+
+/** 
+ * @example synthesize_from_cache.ino
+ * 将文本上传到缓存并合成播放
+ */
+
+/** 
+ * @example synthesizing_control.ino
+ * 合成文本播放流程控制
+ */
