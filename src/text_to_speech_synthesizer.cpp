@@ -3,21 +3,15 @@
 #include "utility/TinyI2CMaster.h"
 
 namespace {
-const uint8_t kI2cAddress = 0x40;
+constexpr uint8_t kI2cAddress = 0x40;
 }
 
 TextToSpeechSynthesizer::TextToSpeechSynthesizer() {
   TinyI2C.init();
 }
 
-void TextToSpeechSynthesizer::StartSynthesizing(const char* text, uint8_t text_size, const TextEncodingType text_encoding_type) {
-  if (text == nullptr || text == 0) {
-    return;
-  }
-
-  text_size = min(text_size, kTextSizeMax);
-  // Serial.print("Synthesize, text_size:");
-  // Serial.println(text_size);
+void TextToSpeechSynthesizer::StartSynthesizing(const String& text, const TextEncodingType text_encoding_type) {
+  auto text_size = min(text.length(), kTextSizeMax);
   TinyI2C.start(kI2cAddress, 0);
   TinyI2C.write(0xFD);
   TinyI2C.write(0x00);
@@ -57,12 +51,12 @@ void TextToSpeechSynthesizer::ResumeSynthesizing() {
   TinyI2C.stop();
 }
 
-void TextToSpeechSynthesizer::PushTextToCache(const char* text, uint8_t text_size, const uint8_t cache_index) {
-  if (text == nullptr || text == 0 || cache_index > kCacheIndexMax) {
+void TextToSpeechSynthesizer::PushTextToCache(const String& text, const uint8_t cache_index) {
+  if (cache_index > kCacheIndexMax) {
     return;
   }
 
-  text_size = min(text_size, kTextSizeMax);
+  auto text_size = min(text.length(), kTextSizeMax);
   // Serial.print("PushTextToCache, text_size:");
   // Serial.println(text_size);
   TinyI2C.start(kI2cAddress, 0);
@@ -77,7 +71,8 @@ void TextToSpeechSynthesizer::PushTextToCache(const char* text, uint8_t text_siz
   TinyI2C.stop();
 }
 
-void TextToSpeechSynthesizer::StartSynthesizingFromCache(const TextEncodingType text_encoding_type, uint8_t synthesizing_count) {
+void TextToSpeechSynthesizer::StartSynthesizingFromCache(const TextEncodingType text_encoding_type,
+                                                         uint8_t synthesizing_count) {
   synthesizing_count = max(min(synthesizing_count, kSynthesizingCountMax), kSynthesizingCountMin);
   TinyI2C.start(kI2cAddress, 0);
   TinyI2C.write(0xFD);

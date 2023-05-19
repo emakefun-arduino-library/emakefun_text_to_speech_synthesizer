@@ -1,5 +1,6 @@
 #pragma once
 
+#include <WString.h>
 #include <stdint.h>
 
 /**
@@ -40,11 +41,10 @@ class TextToSpeechSynthesizer {
 
   /**
    * @brief 启动合成文本并播放
-   * @param[in] text 文本数据地址，值不为null
-   * @param[in] text_size 文本字节大小，值必须大于0，最大值参考 @ref kTextSizeMax，超过的字符将被截断
+   * @param[in] text 类型：String，文本数据地址，数据长度不大于50个字节
    * @param[in] text_encoding_type 文本编码类型，参考 @ref TextEncodingType
    */
-  void StartSynthesizing(const char* text, uint8_t text_size, const TextEncodingType text_encoding_type);
+  void StartSynthesizing(const String& text, const TextEncodingType text_encoding_type);
 
   /**
    * @brief 停止合成播放
@@ -63,16 +63,15 @@ class TextToSpeechSynthesizer {
 
   /**
    * @brief 将文本内容上传到指定缓存块
-   * @param[in] text 文本数据地址，值不为null
-   * @param[in] text_size 文本字节大小，值必须大于0，最大值参考 @ref kTextSizeMax，超过的字符将被截断
+   * @param[in] text 类型：String，文本数据地址，数据长度不大于50个字节
    * @param[in] cache_index 缓存块索引，范围参考 0 ~ @ref kCacheIndexMax
    */
-  void PushTextToCache(const char* text, uint8_t text_size, const uint8_t cache_index);
+  void PushTextToCache(const String& text, const uint8_t cache_index);
 
   /**
    * @brief 从缓存块0开始合成文本并播放
    * @param[in] text_encoding_type 文本编码类型，参考 @ref TextEncodingType
-   * @param[in] synthesizing_count 合成播放次数，范围参考 @ref kSynthesizingCountMin ~ kSynthesizingCountMax
+   * @param[in] synthesizing_count 合成播放次数，范围1 ~ 15，参考 @ref kSynthesizingCountMin ~ @ref kSynthesizingCountMax
    */
   void StartSynthesizingFromCache(const TextEncodingType text_encoding_type, uint8_t synthesizing_count = 1);
 

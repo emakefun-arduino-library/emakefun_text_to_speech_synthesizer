@@ -44,12 +44,11 @@
 
 ### 启动合成并播放
 
-#### `void StartSynthesizing(const char* text, uint8_t text_size, const TextEncodingType text_encoding_type)`
+#### `void StartSynthesizing(const String& text, const TextEncodingType text_encoding_type)`
 
 - 描述：启动合成并播放指定文本。
 - 参数：
-  - `text`：文本数据指针，不能为空。
-  - `text_size`：文本字节大小，值范围：0 < text_size <= 50，参考[kTextSizeMax](#文本数据最大字节数)
+  - `text`：类型：`String`，文本数据地址，数据长度不大于50个字节，参考[kTextSizeMax](#文本数据最大字节数)。如果文本超过50个字节，超过部分将被截断
   - `text_encoding_type`：文本编码类型，参考[TextEncodingType](#文本数据编码类型)
 - 返回值：无。
 
@@ -76,12 +75,11 @@
 
 ### 上传文本到缓存块
 
-#### `void PushTextToCache(const char* text, uint8_t text_size, const uint8_t cache_index)`
+#### `void PushTextToCache(const String& text, const uint8_t cache_index)`
 
 - 描述：将文本上传到指定缓存块中。
 - 参数：
-  - `text`：文本数据指针，不能为空。
-  - `text_size`：文本字节大小，值范围：0 < text_size <= 50，参考[kTextSizeMax](#文本数据最大字节数)
+  - `text`：类型：`String`，文本数据地址，数据长度不大于50个字节，参考[kTextSizeMax](#文本数据最大字节数)。如果文本超过50个字节，超过部分将被截断
   - `cache_index`：缓存块索引，值范围：0 <= cache_index <= 15，参考[kCacheIndexMax](#缓存块索引最大值)
 - 返回值：无。
 
@@ -115,10 +113,10 @@ void setup() {
 
 void loop() {
   // 定义文本，utf-8编码格式
-  String text("一二三四五");
+  const String text("一二三四五");
 
   // 开始以utf-8编码格式合成播放文本
-  text_to_speech_synthesizer.StartSynthesizing(text.c_str(), text.length(), TextToSpeechSynthesizer::TextEncodingType::kTextEncodingTypeUtf8);
+  text_to_speech_synthesizer.StartSynthesizing(text, TextToSpeechSynthesizer::TextEncodingType::kTextEncodingTypeUtf8);
 
   delay(2000);
 }
@@ -142,16 +140,16 @@ void setup() {
 
 void loop() {
   // 定义文本1，utf-8编码格式
-  String text_1("一二三四五");
+  const String text_1("一二三四五");
 
   // 将文本1内容上传到缓存块0
-  text_to_speech_synthesizer.PushTextToCache(text_1.c_str(), text_1.length(), 0);
+  text_to_speech_synthesizer.PushTextToCache(text_1, 0);
 
   // 定义文本2，utf-8编码格式
-  String text_2("六七八九十");
+  const String text_2("六七八九十");
 
   // 将文本2内容上传到缓存块1
-  text_to_speech_synthesizer.PushTextToCache(text_2.c_str(), text_2.length(), 1);
+  text_to_speech_synthesizer.PushTextToCache(text_2, 1);
 
   // 开始从缓存区域合成播放文本，合成播放1次
   text_to_speech_synthesizer.StartSynthesizingFromCache(TextToSpeechSynthesizer::TextEncodingType::kTextEncodingTypeUtf8, 1);
@@ -178,10 +176,10 @@ void setup() {
 
 void loop() {
   // 定义文本，utf-8编码格式
-  String text("一二三四五六七八九十");
+  const String text("一二三四五六七八九十");
 
   // 开始以utf-8编码格式合成播放文本
-  text_to_speech_synthesizer.StartSynthesizing(text.c_str(), text.length(), TextToSpeechSynthesizer::TextEncodingType::kTextEncodingTypeUtf8);
+  text_to_speech_synthesizer.StartSynthesizing(text, TextToSpeechSynthesizer::TextEncodingType::kTextEncodingTypeUtf8);
 
   // 延时1s
   delay(1000);

@@ -13,10 +13,10 @@ void setup() {
 
 void loop() {
   // 定义文本，utf-8编码格式
-  String text("一二三四五");
+  const String text("一二三四五");
 
   // 开始以utf-8编码格式合成播放文本
-  text_to_speech_synthesizer.StartSynthesizing(text.c_str(), text.length(), TextToSpeechSynthesizer::TextEncodingType::kTextEncodingTypeUtf8);
+  text_to_speech_synthesizer.StartSynthesizing(text, TextToSpeechSynthesizer::TextEncodingType::kTextEncodingTypeUtf8);
 
   delay(2000);
 }
