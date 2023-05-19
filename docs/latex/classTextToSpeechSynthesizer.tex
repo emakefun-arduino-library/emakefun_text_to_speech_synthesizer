@@ -1,0 +1,224 @@
+\doxysection{Text\+To\+Speech\+Synthesizer类 参考}
+\hypertarget{classTextToSpeechSynthesizer}{}\label{classTextToSpeechSynthesizer}\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}
+
+
+语音合成主类  
+
+
+
+
+{\ttfamily \#include $<$text\+\_\+to\+\_\+speech\+\_\+synthesizer.\+h$>$}
+
+\doxysubsubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122}{Text\+Encoding\+Type}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122af49ea4453c0246678556ba037e94c34f}{k\+Text\+Encoding\+Type\+Gb23212}} = 0x00
+, \mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122a1255bf612c5475e2aa9ec7c0a5b8f45d}{k\+Text\+Encoding\+Type\+Gbk}} = 0x01
+, \mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122a74f7f0c57948fed5d67891209274cc2c}{k\+Text\+Encoding\+Type\+Big5}} = 0x02
+, \mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122a0dddb46a66e3084b7de46d43b2cdafdc}{k\+Text\+Encoding\+Type\+Utf16le}} = 0x03
+, \newline
+\mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122ab9474e3b178554ef766fcbc0cb0d7a53}{k\+Text\+Encoding\+Type\+Utf8}} = 0x04
+ \}
+\begin{DoxyCompactList}\small\item\em 文本编码类型 \end{DoxyCompactList}\item 
+enum \+: uint8\+\_\+t \{ \mbox{\hyperlink{classTextToSpeechSynthesizer_a714925763209ef5d2f026c36069e8696a47fbe54370b3766e2cfe39444dcd9aff}{k\+Cache\+Index\+Max}} = 15
+ \}
+\item 
+enum \+: uint8\+\_\+t \{ \mbox{\hyperlink{classTextToSpeechSynthesizer_a652be6db2c7d7224be54c5fc85974b61a6e240b4211e757e208a008c8f9d2104b}{k\+Text\+Size\+Max}} = 50
+ \}
+\item 
+enum \+: uint8\+\_\+t \{ \mbox{\hyperlink{classTextToSpeechSynthesizer_a2def84d4e4c020712b7def8ee1eb3426ae036600d18c5aeea6e2f79c6fbd46231}{k\+Synthesizing\+Count\+Min}} = 1
+, \mbox{\hyperlink{classTextToSpeechSynthesizer_a2def84d4e4c020712b7def8ee1eb3426abf91e9b0fd58d05dc56e59980cf719fa}{k\+Synthesizing\+Count\+Max}} = 15
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTextToSpeechSynthesizer_a8eee24497fc75f1014a499947a0d29b9}{Text\+To\+Speech\+Synthesizer}} ()
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTextToSpeechSynthesizer_ad5fae621caf50dc4122ebe3b7da26fb2}{Start\+Synthesizing}} (const String \&text, const \mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122}{Text\+Encoding\+Type}} text\+\_\+encoding\+\_\+type)
+\begin{DoxyCompactList}\small\item\em 启动合成文本并播放 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTextToSpeechSynthesizer_a2dbb0d714f527c92796c62c702be8515}{Stop\+Synthesizing}} ()
+\begin{DoxyCompactList}\small\item\em 停止合成播放 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTextToSpeechSynthesizer_a220648ec022d7c7e987f5223966946a3}{Pause\+Synthesizing}} ()
+\begin{DoxyCompactList}\small\item\em 暂停合成播放 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTextToSpeechSynthesizer_aa6eaa720686b8a11203de7aaff7f557d}{Resume\+Synthesizing}} ()
+\begin{DoxyCompactList}\small\item\em 恢复合成播放 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTextToSpeechSynthesizer_acadf42eabb70af8afaeae7dadf6939cb}{Push\+Text\+To\+Cache}} (const String \&text, const uint8\+\_\+t cache\+\_\+index)
+\begin{DoxyCompactList}\small\item\em 将文本内容上传到指定缓存块 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTextToSpeechSynthesizer_a14b078498622cc2162e4902b41a3508e}{Start\+Synthesizing\+From\+Cache}} (const \mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122}{Text\+Encoding\+Type}} text\+\_\+encoding\+\_\+type, uint8\+\_\+t synthesizing\+\_\+count=1)
+\begin{DoxyCompactList}\small\item\em 从缓存块0开始合成文本并播放 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+语音合成主类 
+
+\doxysubsection{成员枚举类型说明}
+\Hypertarget{classTextToSpeechSynthesizer_a714925763209ef5d2f026c36069e8696}\label{classTextToSpeechSynthesizer_a714925763209ef5d2f026c36069e8696} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum \+: uint8\+\_\+t}
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCacheIndexMax@{kCacheIndexMax}!TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}!kCacheIndexMax@{kCacheIndexMax}}}\Hypertarget{classTextToSpeechSynthesizer_a714925763209ef5d2f026c36069e8696a47fbe54370b3766e2cfe39444dcd9aff}\label{classTextToSpeechSynthesizer_a714925763209ef5d2f026c36069e8696a47fbe54370b3766e2cfe39444dcd9aff} 
+k\+Cache\+Index\+Max&缓存块索引最大值 \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{classTextToSpeechSynthesizer_a652be6db2c7d7224be54c5fc85974b61}\label{classTextToSpeechSynthesizer_a652be6db2c7d7224be54c5fc85974b61} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum \+: uint8\+\_\+t}
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kTextSizeMax@{kTextSizeMax}!TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}!kTextSizeMax@{kTextSizeMax}}}\Hypertarget{classTextToSpeechSynthesizer_a652be6db2c7d7224be54c5fc85974b61a6e240b4211e757e208a008c8f9d2104b}\label{classTextToSpeechSynthesizer_a652be6db2c7d7224be54c5fc85974b61a6e240b4211e757e208a008c8f9d2104b} 
+k\+Text\+Size\+Max&文本数据最大字节数 \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{classTextToSpeechSynthesizer_a2def84d4e4c020712b7def8ee1eb3426}\label{classTextToSpeechSynthesizer_a2def84d4e4c020712b7def8ee1eb3426} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum \+: uint8\+\_\+t}
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSynthesizingCountMin@{kSynthesizingCountMin}!TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}!kSynthesizingCountMin@{kSynthesizingCountMin}}}\Hypertarget{classTextToSpeechSynthesizer_a2def84d4e4c020712b7def8ee1eb3426ae036600d18c5aeea6e2f79c6fbd46231}\label{classTextToSpeechSynthesizer_a2def84d4e4c020712b7def8ee1eb3426ae036600d18c5aeea6e2f79c6fbd46231} 
+k\+Synthesizing\+Count\+Min&从缓存合成播放次数的最小值 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSynthesizingCountMax@{kSynthesizingCountMax}!TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}!kSynthesizingCountMax@{kSynthesizingCountMax}}}\Hypertarget{classTextToSpeechSynthesizer_a2def84d4e4c020712b7def8ee1eb3426abf91e9b0fd58d05dc56e59980cf719fa}\label{classTextToSpeechSynthesizer_a2def84d4e4c020712b7def8ee1eb3426abf91e9b0fd58d05dc56e59980cf719fa} 
+k\+Synthesizing\+Count\+Max&从缓存合成播放次数的最大值 \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122}\label{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122} 
+\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}!TextEncodingType@{TextEncodingType}}
+\index{TextEncodingType@{TextEncodingType}!TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}
+\doxysubsubsection{\texorpdfstring{TextEncodingType}{TextEncodingType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122}{Text\+To\+Speech\+Synthesizer\+::\+Text\+Encoding\+Type}} \+: uint8\+\_\+t}
+
+
+
+文本编码类型 
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kTextEncodingTypeGb23212@{kTextEncodingTypeGb23212}!TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}!kTextEncodingTypeGb23212@{kTextEncodingTypeGb23212}}}\Hypertarget{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122af49ea4453c0246678556ba037e94c34f}\label{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122af49ea4453c0246678556ba037e94c34f} 
+k\+Text\+Encoding\+Type\+Gb23212&GB2312 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kTextEncodingTypeGbk@{kTextEncodingTypeGbk}!TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}!kTextEncodingTypeGbk@{kTextEncodingTypeGbk}}}\Hypertarget{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122a1255bf612c5475e2aa9ec7c0a5b8f45d}\label{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122a1255bf612c5475e2aa9ec7c0a5b8f45d} 
+k\+Text\+Encoding\+Type\+Gbk&GBK \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kTextEncodingTypeBig5@{kTextEncodingTypeBig5}!TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}!kTextEncodingTypeBig5@{kTextEncodingTypeBig5}}}\Hypertarget{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122a74f7f0c57948fed5d67891209274cc2c}\label{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122a74f7f0c57948fed5d67891209274cc2c} 
+k\+Text\+Encoding\+Type\+Big5&BIG5 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kTextEncodingTypeUtf16le@{kTextEncodingTypeUtf16le}!TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}!kTextEncodingTypeUtf16le@{kTextEncodingTypeUtf16le}}}\Hypertarget{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122a0dddb46a66e3084b7de46d43b2cdafdc}\label{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122a0dddb46a66e3084b7de46d43b2cdafdc} 
+k\+Text\+Encoding\+Type\+Utf16le&UTF16\+LE \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kTextEncodingTypeUtf8@{kTextEncodingTypeUtf8}!TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}!kTextEncodingTypeUtf8@{kTextEncodingTypeUtf8}}}\Hypertarget{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122ab9474e3b178554ef766fcbc0cb0d7a53}\label{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122ab9474e3b178554ef766fcbc0cb0d7a53} 
+k\+Text\+Encoding\+Type\+Utf8&UTF8 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{classTextToSpeechSynthesizer_a8eee24497fc75f1014a499947a0d29b9}\label{classTextToSpeechSynthesizer_a8eee24497fc75f1014a499947a0d29b9} 
+\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}!TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}
+\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}!TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}
+\doxysubsubsection{\texorpdfstring{TextToSpeechSynthesizer()}{TextToSpeechSynthesizer()}}
+{\footnotesize\ttfamily Text\+To\+Speech\+Synthesizer\+::\+Text\+To\+Speech\+Synthesizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+
+\doxysubsection{成员函数说明}
+\Hypertarget{classTextToSpeechSynthesizer_a220648ec022d7c7e987f5223966946a3}\label{classTextToSpeechSynthesizer_a220648ec022d7c7e987f5223966946a3} 
+\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}!PauseSynthesizing@{PauseSynthesizing}}
+\index{PauseSynthesizing@{PauseSynthesizing}!TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}
+\doxysubsubsection{\texorpdfstring{PauseSynthesizing()}{PauseSynthesizing()}}
+{\footnotesize\ttfamily void Text\+To\+Speech\+Synthesizer\+::\+Pause\+Synthesizing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+暂停合成播放 
+
+\Hypertarget{classTextToSpeechSynthesizer_acadf42eabb70af8afaeae7dadf6939cb}\label{classTextToSpeechSynthesizer_acadf42eabb70af8afaeae7dadf6939cb} 
+\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}!PushTextToCache@{PushTextToCache}}
+\index{PushTextToCache@{PushTextToCache}!TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}
+\doxysubsubsection{\texorpdfstring{PushTextToCache()}{PushTextToCache()}}
+{\footnotesize\ttfamily void Text\+To\+Speech\+Synthesizer\+::\+Push\+Text\+To\+Cache (\begin{DoxyParamCaption}\item[{const String \&}]{text,  }\item[{const uint8\+\_\+t}]{cache\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+将文本内容上传到指定缓存块 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em text} & 类型：\+String，文本数据地址，数据长度不大于50个字节 \\
+\hline
+\mbox{\texttt{ in}}  & {\em cache\+\_\+index} & 缓存块索引，范围参考 0 \texorpdfstring{$\sim$}{\string~} \doxylink{classTextToSpeechSynthesizer_a714925763209ef5d2f026c36069e8696a47fbe54370b3766e2cfe39444dcd9aff}{k\+Cache\+Index\+Max} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTextToSpeechSynthesizer_aa6eaa720686b8a11203de7aaff7f557d}\label{classTextToSpeechSynthesizer_aa6eaa720686b8a11203de7aaff7f557d} 
+\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}!ResumeSynthesizing@{ResumeSynthesizing}}
+\index{ResumeSynthesizing@{ResumeSynthesizing}!TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}
+\doxysubsubsection{\texorpdfstring{ResumeSynthesizing()}{ResumeSynthesizing()}}
+{\footnotesize\ttfamily void Text\+To\+Speech\+Synthesizer\+::\+Resume\+Synthesizing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+恢复合成播放 
+
+\Hypertarget{classTextToSpeechSynthesizer_ad5fae621caf50dc4122ebe3b7da26fb2}\label{classTextToSpeechSynthesizer_ad5fae621caf50dc4122ebe3b7da26fb2} 
+\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}!StartSynthesizing@{StartSynthesizing}}
+\index{StartSynthesizing@{StartSynthesizing}!TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}
+\doxysubsubsection{\texorpdfstring{StartSynthesizing()}{StartSynthesizing()}}
+{\footnotesize\ttfamily void Text\+To\+Speech\+Synthesizer\+::\+Start\+Synthesizing (\begin{DoxyParamCaption}\item[{const String \&}]{text,  }\item[{const \mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122}{Text\+Encoding\+Type}}}]{text\+\_\+encoding\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+启动合成文本并播放 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em text} & 类型：\+String，文本数据地址，数据长度不大于50个字节 \\
+\hline
+\mbox{\texttt{ in}}  & {\em text\+\_\+encoding\+\_\+type} & 文本编码类型，参考 \doxylink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122}{Text\+Encoding\+Type} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTextToSpeechSynthesizer_a14b078498622cc2162e4902b41a3508e}\label{classTextToSpeechSynthesizer_a14b078498622cc2162e4902b41a3508e} 
+\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}!StartSynthesizingFromCache@{StartSynthesizingFromCache}}
+\index{StartSynthesizingFromCache@{StartSynthesizingFromCache}!TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}
+\doxysubsubsection{\texorpdfstring{StartSynthesizingFromCache()}{StartSynthesizingFromCache()}}
+{\footnotesize\ttfamily void Text\+To\+Speech\+Synthesizer\+::\+Start\+Synthesizing\+From\+Cache (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122}{Text\+Encoding\+Type}}}]{text\+\_\+encoding\+\_\+type,  }\item[{uint8\+\_\+t}]{synthesizing\+\_\+count = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+从缓存块0开始合成文本并播放 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em text\+\_\+encoding\+\_\+type} & 文本编码类型，参考 \doxylink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122}{Text\+Encoding\+Type} \\
+\hline
+\mbox{\texttt{ in}}  & {\em synthesizing\+\_\+count} & 合成播放次数，范围1 \texorpdfstring{$\sim$}{\string~} 15，参考 \doxylink{classTextToSpeechSynthesizer_a2def84d4e4c020712b7def8ee1eb3426ae036600d18c5aeea6e2f79c6fbd46231}{k\+Synthesizing\+Count\+Min} \texorpdfstring{$\sim$}{\string~} \doxylink{classTextToSpeechSynthesizer_a2def84d4e4c020712b7def8ee1eb3426abf91e9b0fd58d05dc56e59980cf719fa}{k\+Synthesizing\+Count\+Max} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTextToSpeechSynthesizer_a2dbb0d714f527c92796c62c702be8515}\label{classTextToSpeechSynthesizer_a2dbb0d714f527c92796c62c702be8515} 
+\index{TextToSpeechSynthesizer@{TextToSpeechSynthesizer}!StopSynthesizing@{StopSynthesizing}}
+\index{StopSynthesizing@{StopSynthesizing}!TextToSpeechSynthesizer@{TextToSpeechSynthesizer}}
+\doxysubsubsection{\texorpdfstring{StopSynthesizing()}{StopSynthesizing()}}
+{\footnotesize\ttfamily void Text\+To\+Speech\+Synthesizer\+::\+Stop\+Synthesizing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+停止合成播放 
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{text__to__speech__synthesizer_8h}{text\+\_\+to\+\_\+speech\+\_\+synthesizer.\+h}}\end{DoxyCompactItemize}

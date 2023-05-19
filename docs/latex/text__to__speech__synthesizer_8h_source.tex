@@ -1,0 +1,52 @@
+\doxysection{text\+\_\+to\+\_\+speech\+\_\+synthesizer.\+h}
+\hypertarget{text__to__speech__synthesizer_8h_source}{}\label{text__to__speech__synthesizer_8h_source}\index{text\_to\_speech\_synthesizer.h@{text\_to\_speech\_synthesizer.h}}
+\mbox{\hyperlink{text__to__speech__synthesizer_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <WString.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTextToSpeechSynthesizer}{TextToSpeechSynthesizer}}\ \{}
+\DoxyCodeLine{00011\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122}{TextEncodingType}}\ :\ uint8\_t\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122af49ea4453c0246678556ba037e94c34f}{kTextEncodingTypeGb23212}}\ =\ 0x00,\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122a1255bf612c5475e2aa9ec7c0a5b8f45d}{kTextEncodingTypeGbk}}\ =\ 0x01,\ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122a74f7f0c57948fed5d67891209274cc2c}{kTextEncodingTypeBig5}}\ =\ 0x02,\ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122a0dddb46a66e3084b7de46d43b2cdafdc}{kTextEncodingTypeUtf16le}}\ =\ 0x03,\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122ab9474e3b178554ef766fcbc0cb0d7a53}{kTextEncodingTypeUtf8}}\ =\ 0x04,\ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ enum\ :\ uint8\_t\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classTextToSpeechSynthesizer_a714925763209ef5d2f026c36069e8696a47fbe54370b3766e2cfe39444dcd9aff}{kCacheIndexMax}}\ =\ 15,\ }
+\DoxyCodeLine{00026\ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ enum\ :\ uint8\_t\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classTextToSpeechSynthesizer_a652be6db2c7d7224be54c5fc85974b61a6e240b4211e757e208a008c8f9d2104b}{kTextSizeMax}}\ =\ 50,\ }
+\DoxyCodeLine{00030\ \ \ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ enum\ :\ uint8\_t\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classTextToSpeechSynthesizer_a2def84d4e4c020712b7def8ee1eb3426ae036600d18c5aeea6e2f79c6fbd46231}{kSynthesizingCountMin}}\ =\ 1,\ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classTextToSpeechSynthesizer_a2def84d4e4c020712b7def8ee1eb3426abf91e9b0fd58d05dc56e59980cf719fa}{kSynthesizingCountMax}}\ =\ 15,\ }
+\DoxyCodeLine{00035\ \ \ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \mbox{\hyperlink{classTextToSpeechSynthesizer_a8eee24497fc75f1014a499947a0d29b9}{TextToSpeechSynthesizer}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTextToSpeechSynthesizer_ad5fae621caf50dc4122ebe3b7da26fb2}{StartSynthesizing}}(\textcolor{keyword}{const}\ String\&\ text,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122}{TextEncodingType}}\ text\_encoding\_type);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTextToSpeechSynthesizer_a2dbb0d714f527c92796c62c702be8515}{StopSynthesizing}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTextToSpeechSynthesizer_a220648ec022d7c7e987f5223966946a3}{PauseSynthesizing}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTextToSpeechSynthesizer_aa6eaa720686b8a11203de7aaff7f557d}{ResumeSynthesizing}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00069\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTextToSpeechSynthesizer_acadf42eabb70af8afaeae7dadf6939cb}{PushTextToCache}}(\textcolor{keyword}{const}\ String\&\ text,\ \textcolor{keyword}{const}\ uint8\_t\ cache\_index);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00076\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTextToSpeechSynthesizer_a14b078498622cc2162e4902b41a3508e}{StartSynthesizingFromCache}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTextToSpeechSynthesizer_a4dae86d1d4cf4f6aeeec8b1ba3575122}{TextEncodingType}}\ text\_encoding\_type,\ uint8\_t\ synthesizing\_count\ =\ 1);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00079\ \ \ \mbox{\hyperlink{classTextToSpeechSynthesizer_a8eee24497fc75f1014a499947a0d29b9}{TextToSpeechSynthesizer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTextToSpeechSynthesizer}{TextToSpeechSynthesizer}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00080\ \ \ \mbox{\hyperlink{classTextToSpeechSynthesizer}{TextToSpeechSynthesizer}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTextToSpeechSynthesizer}{TextToSpeechSynthesizer}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00081\ \};}
+
+\end{DoxyCode}

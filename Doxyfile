@@ -1,0 +1,19 @@
+# Doxyfile 1.8.20
+
+# 将源代码路径设置为当前目录
+INPUT = ./src/text_to_speech_synthesizer.h
+
+# 设置输出目录为docs
+OUTPUT_DIRECTORY = docs
+
+# 将输出格式设置为HTML
+GENERATE_HTML = YES
+
+# 将所有的注释都包括在输出中
+EXTRACT_ALL = YES
+
+# 在HTML中生成搜索功能
+HTML_SEARCH = YES
+
+# 将HTML输出样式设置为code block
+HTML_STYLESHEET = doxygen.css
