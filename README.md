@@ -13,3 +13,5 @@
 [从缓存区域合成播放文本](https://emakefun-arduino-library.github.io/emakefun_text_to_speech_synthesizer/synthesize_from_cache_8ino-example.html)
 
 [合成播放流程控制](https://emakefun-arduino-library.github.io/emakefun_text_to_speech_synthesizer/synthesizing_control_8ino-example.html)
+
+[合成文本播放的详细参数设置](https://emakefun-arduino-library.github.io/emakefun_text_to_speech_synthesizer/configure_synthesizing_parameter_8ino-example.html)

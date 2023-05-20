@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Emakefun Text To Speech Synthesizer: synthesize_from_cache.ino</title>
+<title>Emakefun Text To Speech Synthesizer: configure_synthesizing_parameter.ino</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,10 +69,10 @@ $(function() {
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">synthesize_from_cache.ino</div></div>
+  <div class="headertitle"><div class="title">configure_synthesizing_parameter.ino</div></div>
 </div><!--header-->
 <div class="contents">
-<p>将文本上传到缓存并合成播放</p>
+<p>合成文本播放的详细参数设置</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// 包含头文件 text_to_speech_synthesizer.h</span></div>
@@ -87,27 +87,29 @@ $(function() {
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> loop() {</div>
-<div class="line">  <span class="comment">// 定义文本1，utf-8编码格式</span></div>
-<div class="line">  <span class="keyword">const</span> String text_1(<span class="stringliteral">&quot;一二三四五&quot;</span>);</div>
+<div class="line">  <span class="comment">// 定义文本，utf-8编码格式，文本前面增加[v1]来标注音量，以音量为10进行合成播放</span></div>
+<div class="line">  <span class="comment">// 文本标注：设置音量格式：[v*]，其中*的范围是0 ~ 10，音量值默认音量为5，10 对应到最高音量</span></div>
+<div class="line">  <span class="comment">// 更多文本标注参数见文档</span></div>
+<div class="line">  <span class="keyword">const</span> String text(<span class="stringliteral">&quot;[v1]一二三四五&quot;</span>); <span class="comment">// 文本前面增加[v1]来标注音量，以音量为10进行合成播放</span></div>
 <div class="line"> </div>
-<div class="line">  <span class="comment">// 将文本1内容上传到缓存块0</span></div>
-<div class="line">  text_to_speech_synthesizer.<a id="a1" name="a1"></a><a class="code hl_function" href="classTextToSpeechSynthesizer.html#acadf42eabb70af8afaeae7dadf6939cb">PushTextToCache</a>(text_1, 0);</div>
+<div class="line">  <span class="comment">// 开始以utf-8编码格式合成播放文本</span></div>
+<div class="line">  text_to_speech_synthesizer.<a id="a1" name="a1"></a><a class="code hl_function" href="classTextToSpeechSynthesizer.html#ad5fae621caf50dc4122ebe3b7da26fb2">StartSynthesizing</a>(text, <a id="a2" name="a2"></a><a class="code hl_enumvalue" href="classTextToSpeechSynthesizer.html#a4dae86d1d4cf4f6aeeec8b1ba3575122ab9474e3b178554ef766fcbc0cb0d7a53">TextToSpeechSynthesizer::TextEncodingType::kTextEncodingTypeUtf8</a>);</div>
 <div class="line"> </div>
-<div class="line">  <span class="comment">// 定义文本2，utf-8编码格式</span></div>
-<div class="line">  <span class="keyword">const</span> String text_2(<span class="stringliteral">&quot;六七八九十&quot;</span>);</div>
+<div class="line">  delay(2000);</div>
 <div class="line"> </div>
-<div class="line">  <span class="comment">// 将文本2内容上传到缓存块1</span></div>
-<div class="line">  text_to_speech_synthesizer.<a class="code hl_function" href="classTextToSpeechSynthesizer.html#acadf42eabb70af8afaeae7dadf6939cb">PushTextToCache</a>(text_2, 1);</div>
+<div class="line">  <span class="comment">// 定义文本，utf-8编码格式，文本前面增加[v10]来标注音量，以音量为10进行合成播放</span></div>
+<div class="line">  <span class="comment">// 文本标注：设置音量格式：[v*]，其中*的范围是0 ~ 10，音量值默认音量为5，10 对应到最高音量</span></div>
+<div class="line">  <span class="comment">// 更多文本标注参数见文档</span></div>
+<div class="line">  <span class="keyword">const</span> String text(<span class="stringliteral">&quot;[v10]一二三四五&quot;</span>); <span class="comment">// 文本前面增加[v10]来标注音量，以音量为10进行合成播放</span></div>
 <div class="line"> </div>
-<div class="line">  <span class="comment">// 开始从缓存区域合成播放文本，合成播放1次</span></div>
-<div class="line">  text_to_speech_synthesizer.<a id="a2" name="a2"></a><a class="code hl_function" href="classTextToSpeechSynthesizer.html#a14b078498622cc2162e4902b41a3508e">StartSynthesizingFromCache</a>(<a id="a3" name="a3"></a><a class="code hl_enumvalue" href="classTextToSpeechSynthesizer.html#a4dae86d1d4cf4f6aeeec8b1ba3575122ab9474e3b178554ef766fcbc0cb0d7a53">TextToSpeechSynthesizer::TextEncodingType::kTextEncodingTypeUtf8</a>, 1);</div>
+<div class="line">  <span class="comment">// 开始以utf-8编码格式合成播放文本</span></div>
+<div class="line">  text_to_speech_synthesizer.<a class="code hl_function" href="classTextToSpeechSynthesizer.html#ad5fae621caf50dc4122ebe3b7da26fb2">StartSynthesizing</a>(text, <a class="code hl_enumvalue" href="classTextToSpeechSynthesizer.html#a4dae86d1d4cf4f6aeeec8b1ba3575122ab9474e3b178554ef766fcbc0cb0d7a53">TextToSpeechSynthesizer::TextEncodingType::kTextEncodingTypeUtf8</a>);</div>
 <div class="line"> </div>
-<div class="line">  delay(3000);</div>
+<div class="line">  delay(2000);</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassTextToSpeechSynthesizer_html"><div class="ttname"><a href="classTextToSpeechSynthesizer.html">TextToSpeechSynthesizer</a></div><div class="ttdoc">语音合成主类</div><div class="ttdef"><b>Definition</b> text_to_speech_synthesizer.h:10</div></div>
-<div class="ttc" id="aclassTextToSpeechSynthesizer_html_a14b078498622cc2162e4902b41a3508e"><div class="ttname"><a href="classTextToSpeechSynthesizer.html#a14b078498622cc2162e4902b41a3508e">TextToSpeechSynthesizer::StartSynthesizingFromCache</a></div><div class="ttdeci">void StartSynthesizingFromCache(const TextEncodingType text_encoding_type, uint8_t synthesizing_count=1)</div><div class="ttdoc">从缓存块0开始合成文本并播放</div></div>
 <div class="ttc" id="aclassTextToSpeechSynthesizer_html_a4dae86d1d4cf4f6aeeec8b1ba3575122ab9474e3b178554ef766fcbc0cb0d7a53"><div class="ttname"><a href="classTextToSpeechSynthesizer.html#a4dae86d1d4cf4f6aeeec8b1ba3575122ab9474e3b178554ef766fcbc0cb0d7a53">TextToSpeechSynthesizer::kTextEncodingTypeUtf8</a></div><div class="ttdeci">@ kTextEncodingTypeUtf8</div><div class="ttdef"><b>Definition</b> text_to_speech_synthesizer.h:21</div></div>
-<div class="ttc" id="aclassTextToSpeechSynthesizer_html_acadf42eabb70af8afaeae7dadf6939cb"><div class="ttname"><a href="classTextToSpeechSynthesizer.html#acadf42eabb70af8afaeae7dadf6939cb">TextToSpeechSynthesizer::PushTextToCache</a></div><div class="ttdeci">void PushTextToCache(const String &amp;text, const uint8_t cache_index)</div><div class="ttdoc">将文本内容上传到指定缓存块</div></div>
+<div class="ttc" id="aclassTextToSpeechSynthesizer_html_ad5fae621caf50dc4122ebe3b7da26fb2"><div class="ttname"><a href="classTextToSpeechSynthesizer.html#ad5fae621caf50dc4122ebe3b7da26fb2">TextToSpeechSynthesizer::StartSynthesizing</a></div><div class="ttdeci">void StartSynthesizing(const String &amp;text, const TextEncodingType text_encoding_type)</div><div class="ttdoc">启动合成文本并播放</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

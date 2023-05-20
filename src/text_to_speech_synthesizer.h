@@ -94,3 +94,8 @@ class TextToSpeechSynthesizer {
  * @example synthesizing_control.ino
  * 合成文本播放流程控制
  */
+
+/**
+ * @example configure_synthesizing_parameter.ino
+ * 合成文本播放的详细参数设置
+ */
