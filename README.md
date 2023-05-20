@@ -2,6 +2,10 @@
 
 `TextToSpeechSynthesizer`用于控制文本到语音合成模块的主类
 
+## 产品文档
+
+[产品文档](https://test-doc-zh-cn.readthedocs.io/projects/emakefun/zh_CN/latest/sensors/smart_modules/text_to_speech_synthesizer/)
+
 ## API使用文档
 
 [API使用文档](https://emakefun-arduino-library.github.io/emakefun_text_to_speech_synthesizer/classTextToSpeechSynthesizer.html)
