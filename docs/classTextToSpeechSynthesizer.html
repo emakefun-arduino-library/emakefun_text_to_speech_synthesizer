@@ -98,7 +98,7 @@ Public 类型</h2></td></tr>
 <tr class="memitem:a714925763209ef5d2f026c36069e8696"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: uint8_t { <a class="el" href="classTextToSpeechSynthesizer.html#a714925763209ef5d2f026c36069e8696a47fbe54370b3766e2cfe39444dcd9aff">kCacheIndexMax</a> = 15
  }</td></tr>
 <tr class="separator:a714925763209ef5d2f026c36069e8696"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a652be6db2c7d7224be54c5fc85974b61"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: uint8_t { <a class="el" href="classTextToSpeechSynthesizer.html#a652be6db2c7d7224be54c5fc85974b61a6e240b4211e757e208a008c8f9d2104b">kTextSizeMax</a> = 50
+<tr class="memitem:a652be6db2c7d7224be54c5fc85974b61"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: uint8_t { <a class="el" href="classTextToSpeechSynthesizer.html#a652be6db2c7d7224be54c5fc85974b61a6e240b4211e757e208a008c8f9d2104b">kTextSizeMax</a> = 250
  }</td></tr>
 <tr class="separator:a652be6db2c7d7224be54c5fc85974b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2def84d4e4c020712b7def8ee1eb3426"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: uint8_t { <a class="el" href="classTextToSpeechSynthesizer.html#a2def84d4e4c020712b7def8ee1eb3426ae036600d18c5aeea6e2f79c6fbd46231">kSynthesizingCountMin</a> = 1
@@ -290,7 +290,7 @@ Public 成员函数</h2></td></tr>
 <p>将文本内容上传到指定缓存块 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>类型：String，文本数据地址，数据长度不大于50个字节 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>类型：String，文本数据地址，数据长度不大于250个字节 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">cache_index</td><td>缓存块索引，范围参考 0 ~ <a class="el" href="classTextToSpeechSynthesizer.html#a714925763209ef5d2f026c36069e8696a47fbe54370b3766e2cfe39444dcd9aff">kCacheIndexMax</a> </td></tr>
   </table>
   </dd>
@@ -350,7 +350,7 @@ Public 成员函数</h2></td></tr>
 <p>启动合成文本并播放 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>类型：String，文本数据地址，数据长度不大于50个字节 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>类型：String，文本数据地址，数据长度不大于250个字节 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">text_encoding_type</td><td>文本编码类型，参考 <a class="el" href="classTextToSpeechSynthesizer.html#a4dae86d1d4cf4f6aeeec8b1ba3575122">TextEncodingType</a> </td></tr>
   </table>
   </dd>
@@ -426,7 +426,7 @@ Public 成员函数</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 五月 20日 星期六 16:00:59 , 为 Emakefun Text To Speech Synthesizer使用 &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+生成于 2023年 八月 18日 星期五 17:50:43 , 为 Emakefun Text To Speech Synthesizer使用 &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
 </small></address>
 </body>
 </html>

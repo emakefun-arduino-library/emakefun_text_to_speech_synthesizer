@@ -26,7 +26,7 @@ class TextToSpeechSynthesizer {
   };
 
   enum : uint8_t {
-    kTextSizeMax = 50, /**< 文本数据最大字节数 */
+    kTextSizeMax = 250, /**< 文本数据最大字节数 */
   };
 
   enum : uint8_t {
@@ -41,7 +41,7 @@ class TextToSpeechSynthesizer {
 
   /**
    * @brief 启动合成文本并播放
-   * @param[in] text 类型：String，文本数据地址，数据长度不大于50个字节
+   * @param[in] text 类型：String，文本数据地址，数据长度不大于250个字节
    * @param[in] text_encoding_type 文本编码类型，参考 @ref TextEncodingType
    */
   void StartSynthesizing(const String& text, const TextEncodingType text_encoding_type);
@@ -63,7 +63,7 @@ class TextToSpeechSynthesizer {
 
   /**
    * @brief 将文本内容上传到指定缓存块
-   * @param[in] text 类型：String，文本数据地址，数据长度不大于50个字节
+   * @param[in] text 类型：String，文本数据地址，数据长度不大于250个字节
    * @param[in] cache_index 缓存块索引，范围参考 0 ~ @ref kCacheIndexMax
    */
   void PushTextToCache(const String& text, const uint8_t cache_index);
@@ -80,17 +80,17 @@ class TextToSpeechSynthesizer {
   TextToSpeechSynthesizer& operator=(const TextToSpeechSynthesizer&) = delete;
 };
 
-/** 
+/**
  * @example synthesize_text.ino
  * 合成文本并播放
  */
 
-/** 
+/**
  * @example synthesize_from_cache.ino
  * 将文本上传到缓存并合成播放
  */
 
-/** 
+/**
  * @example synthesizing_control.ino
  * 合成文本播放流程控制
  */
