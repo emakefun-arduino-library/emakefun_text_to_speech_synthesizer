@@ -4,7 +4,7 @@
 
 ## 产品文档
 
-[产品文档](https://test-doc-zh-cn.readthedocs.io/projects/emakefun/zh_CN/latest/sensors/smart_modules/text_to_speech_synthesizer/)
+[产品文档](https://emakefun-docs.readthedocs.io/zh_CN/latest/sensors/smart_modules/text_to_speech_synthesizer)
 
 ## API使用文档
 
